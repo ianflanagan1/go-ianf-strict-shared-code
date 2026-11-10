@@ -1,6 +1,6 @@
 # go-adapters
 
-Adapters shared by every project on [go-baseline](../go-baseline). Each package implements a port by doing I/O and makes no decisions, so it can be reviewed once and trusted everywhere. Import them only from a composition root (`cmd/`) or a project's own adapters; the shell declares the ports they satisfy.
+Adapters shared by every project on [go-baseline](../go-baseline). It's a library of only driven adapters, under `adapters/driven/`, so they may use third-party modules such as pgx. Each package implements a port by doing I/O and makes no decisions, so it can be reviewed once and trusted everywhere. Import them only from a composition root (`cmd/`) or a project's own adapters; the shell declares the ports they satisfy.
 
 | Package | Adapts | Satisfies a port like |
 |---|---|---|
@@ -11,7 +11,7 @@ Adapters shared by every project on [go-baseline](../go-baseline). Each package 
 | `httpsend` | HTTP, through `net/http` | `Send(ctx context.Context, req httpmsg.Request) (httpmsg.Response, error)` |
 | `sqlquery` | Postgres, through `database/sql` and pgx | `Query(ctx, sqlmsg.Query) (sqlmsg.Rows, error)`, `Exec(ctx, sqlmsg.Query) (sqlmsg.Result, error)`, `InTx(ctx, func(sqlmsg.Tx) error) error` |
 
-The request, response, query and row types are in [go-ports](https://github.com/ianflanagan1/go-ports), a pure library, so a project's core can build and read them and its shell can declare ports in them.
+The request, response, query and row types are in [go-ports](https://github.com/ianflanagan1/go-ports), a library of only core, so a project's core can build and read them and its shell can declare ports in them.
 
 `sqlquery` supports Postgres only; its package documentation lists how each Postgres type arrives. `InTx` runs a function inside a transaction: it commits when the function returns nil, and rolls back when it returns an error or panics.
 

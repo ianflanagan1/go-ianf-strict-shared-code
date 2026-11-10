@@ -8,7 +8,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/ianflanagan1/go-adapters/httpsend"
+	"github.com/ianflanagan1/go-adapters/adapters/driven/httpsend"
 	"github.com/ianflanagan1/go-ports/httpmsg"
 )
 

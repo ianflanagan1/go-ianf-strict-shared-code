@@ -3,7 +3,7 @@ package env_test
 import (
 	"testing"
 
-	"github.com/ianflanagan1/go-adapters/env"
+	"github.com/ianflanagan1/go-adapters/adapters/driven/env"
 )
 
 func TestLookupReadsTheEnvironment(t *testing.T) {

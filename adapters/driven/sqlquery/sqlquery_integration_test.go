@@ -13,7 +13,7 @@ import (
 
 	_ "github.com/jackc/pgx/v5/stdlib"
 
-	"github.com/ianflanagan1/go-adapters/sqlquery"
+	"github.com/ianflanagan1/go-adapters/adapters/driven/sqlquery"
 	"github.com/ianflanagan1/go-ports/sqlmsg"
 )
 
