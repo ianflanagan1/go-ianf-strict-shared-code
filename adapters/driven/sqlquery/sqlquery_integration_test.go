@@ -13,8 +13,8 @@ import (
 
 	_ "github.com/jackc/pgx/v5/stdlib"
 
-	"github.com/ianflanagan1/go-adapters/adapters/driven/sqlquery"
-	"github.com/ianflanagan1/go-ports/sqlmsg"
+	"github.com/ianflanagan1/go-ianf-strict-ports/sqlmsg"
+	"github.com/ianflanagan1/go-ianf-strict-shared-code/adapters/driven/sqlquery"
 )
 
 // open connects to the Postgres at GO_ADAPTERS_POSTGRES_URL, such as one

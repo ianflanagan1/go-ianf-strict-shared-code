@@ -11,7 +11,7 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/ianflanagan1/go-ports/httpmsg"
+	"github.com/ianflanagan1/go-ianf-strict-ports/httpmsg"
 )
 
 // ErrBodyTooLarge is returned when a response body is longer than the

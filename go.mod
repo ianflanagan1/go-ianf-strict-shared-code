@@ -1,16 +1,16 @@
-module github.com/ianflanagan1/go-adapters
+module github.com/ianflanagan1/go-ianf-strict-shared-code
 
 go 1.27
 
-tool github.com/ianflanagan1/go-baseline/cmd/go-baseline
+tool github.com/ianflanagan1/go-ianf-strict-baseline/cmd/go-ianf-strict-baseline
 
 require (
-	github.com/ianflanagan1/go-ports v0.2.0
+	github.com/ianflanagan1/go-ianf-strict-ports v0.2.0
 	github.com/jackc/pgx/v5 v5.11.0
 )
 
 require (
-	github.com/ianflanagan1/go-baseline v0.4.0 // indirect
+	github.com/ianflanagan1/go-ianf-strict-baseline v0.4.0 // indirect
 	github.com/jackc/pgpassfile v1.0.0 // indirect
 	github.com/jackc/pgservicefile v0.0.0-20240606120523-5a60cdf6a761 // indirect
 	github.com/jackc/puddle/v2 v2.2.2 // indirect

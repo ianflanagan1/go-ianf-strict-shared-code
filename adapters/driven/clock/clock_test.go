@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ianflanagan1/go-adapters/adapters/driven/clock"
+	"github.com/ianflanagan1/go-ianf-strict-shared-code/adapters/driven/clock"
 )
 
 func TestNowIsTheCurrentTime(t *testing.T) {

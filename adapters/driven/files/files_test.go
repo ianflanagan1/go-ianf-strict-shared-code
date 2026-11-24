@@ -3,7 +3,7 @@ package files_test
 import (
 	"testing"
 
-	"github.com/ianflanagan1/go-adapters/adapters/driven/files"
+	"github.com/ianflanagan1/go-ianf-strict-shared-code/adapters/driven/files"
 )
 
 func openDir(t *testing.T) *files.Dir {

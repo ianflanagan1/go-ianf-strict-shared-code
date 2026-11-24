@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ianflanagan1/go-adapters/values/id"
+	"github.com/ianflanagan1/go-ianf-strict-shared-code/values/id"
 )
 
 const (

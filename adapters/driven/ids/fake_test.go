@@ -3,8 +3,8 @@ package ids_test
 import (
 	"testing"
 
-	"github.com/ianflanagan1/go-adapters/adapters/driven/ids"
-	"github.com/ianflanagan1/go-adapters/values/id"
+	"github.com/ianflanagan1/go-ianf-strict-shared-code/adapters/driven/ids"
+	"github.com/ianflanagan1/go-ianf-strict-shared-code/values/id"
 )
 
 const (

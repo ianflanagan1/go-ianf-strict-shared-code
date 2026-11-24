@@ -1,6 +1,6 @@
 package ids
 
-import "github.com/ianflanagan1/go-adapters/values/id"
+import "github.com/ianflanagan1/go-ianf-strict-shared-code/values/id"
 
 // Fake stands in for System in tests, handing out the IDs it was given, in
 // order.

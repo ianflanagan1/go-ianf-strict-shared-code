@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/ianflanagan1/go-adapters/adapters/driven/random"
+	"github.com/ianflanagan1/go-ianf-strict-shared-code/adapters/driven/random"
 )
 
 func TestSecureFillsTheBuffer(t *testing.T) {

@@ -4,10 +4,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ianflanagan1/go-adapters/adapters/driven/clock"
-	"github.com/ianflanagan1/go-adapters/adapters/driven/ids"
-	"github.com/ianflanagan1/go-adapters/adapters/driven/random"
-	"github.com/ianflanagan1/go-adapters/values/id"
+	"github.com/ianflanagan1/go-ianf-strict-shared-code/adapters/driven/clock"
+	"github.com/ianflanagan1/go-ianf-strict-shared-code/adapters/driven/ids"
+	"github.com/ianflanagan1/go-ianf-strict-shared-code/adapters/driven/random"
+	"github.com/ianflanagan1/go-ianf-strict-shared-code/values/id"
 )
 
 // source is what both the system IDs and its fake offer.

@@ -23,7 +23,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ianflanagan1/go-ports/sqlmsg"
+	"github.com/ianflanagan1/go-ianf-strict-ports/sqlmsg"
 )
 
 // ErrUnsupportedType is returned for a column whose driver type has no
