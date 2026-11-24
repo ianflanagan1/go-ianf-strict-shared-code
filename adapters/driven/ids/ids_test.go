@@ -1,6 +1,7 @@
 package ids_test
 
 import (
+	"bytes"
 	"testing"
 	"time"
 
@@ -22,13 +23,13 @@ func contract(t *testing.T, s source) {
 	t.Helper()
 	t.Run("each row ID is new", func(t *testing.T) {
 		first, second := s.NewRowID(), s.NewRowID()
-		if first.Bytes() == second.Bytes() {
+		if bytes.Equal(first.Bytes[:], second.Bytes[:]) {
 			t.Fatalf("got %s twice; want two different row IDs", first.Text())
 		}
 	})
 	t.Run("each public ID is new", func(t *testing.T) {
 		first, second := s.NewPublicID(), s.NewPublicID()
-		if first.Bytes() == second.Bytes() {
+		if bytes.Equal(first.Bytes[:], second.Bytes[:]) {
 			t.Fatalf("got %s twice; want two different public IDs", first)
 		}
 	})
@@ -47,7 +48,7 @@ func TestTheFakeKeepsTheContract(t *testing.T) {
 
 func TestARowIDStartsWithTheMillisecondItWasMadeIn(t *testing.T) {
 	before := time.Now().UnixMilli()
-	b := ids.NewSystem(clock.System{}, random.Secure{}).NewRowID().Bytes()
+	b := ids.NewSystem(clock.System{}, random.Secure{}).NewRowID().Bytes
 	after := time.Now().UnixMilli()
 
 	var ms int64
@@ -63,7 +64,7 @@ func TestRowIDsMadeInTheSameMillisecondDiffer(t *testing.T) {
 	s := ids.NewSystem(clock.System{}, random.Secure{})
 	seen := map[[16]byte]bool{}
 	for range 1000 {
-		b := s.NewRowID().Bytes()
+		b := s.NewRowID().Bytes
 		if seen[b] {
 			t.Fatalf("got %x twice; want 1000 different row IDs", b)
 		}
@@ -75,7 +76,7 @@ func TestPublicIDsDiffer(t *testing.T) {
 	s := ids.NewSystem(clock.System{}, random.Secure{})
 	seen := map[[16]byte]bool{}
 	for range 1000 {
-		b := s.NewPublicID().Bytes()
+		b := s.NewPublicID().Bytes
 		if seen[b] {
 			t.Fatalf("got %x twice; want 1000 different public IDs", b)
 		}

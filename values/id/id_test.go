@@ -64,7 +64,7 @@ func TestARowIDParsedFromTextHasTheUUIDsBytes(t *testing.T) {
 	if err != nil {
 		t.Fatalf("got %v; want nil", err)
 	}
-	if got := r.Bytes(); string(got[:]) != string(aUUIDv7Bytes()) {
+	if got := r.Bytes; string(got[:]) != string(aUUIDv7Bytes()) {
 		t.Fatalf("got %x; want %x", got, aUUIDv7Bytes())
 	}
 }
@@ -159,7 +159,7 @@ func TestAPublicIDParsedFromTextHasTheUUIDsBytes(t *testing.T) {
 	if err != nil {
 		t.Fatalf("got %v; want nil", err)
 	}
-	if got := p.Bytes(); string(got[:]) != string(aUUIDv4Bytes()) {
+	if got := p.Bytes; string(got[:]) != string(aUUIDv4Bytes()) {
 		t.Fatalf("got %x; want %x", got, aUUIDv4Bytes())
 	}
 }
